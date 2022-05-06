@@ -136,6 +136,16 @@ If the boolean value is true it should return the string without the first lette
 
 */
 
+function deleteOne(str1, bool) {
+    if (bool === true) {
+        console.log(str1.slice(1))
+    } else {
+        console.log(str1.slice(0, str1.length - 1))
+    }
+}
+
+deleteOne("Epicode", false)
+
 /* EXERCISE 5
 
 Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
@@ -144,17 +154,61 @@ Ex.: onlyLetters("I have 4 dogs") => returns "I have dogs"
 
 */
 
+function onlyLetters(str2) {
+    let newString = str2.replace(/[0-9]/g, '')
+    console.log(newString)
+}
+
+onlyLetters("I have 4 dogs")
+
 /* EXERCISE 6
 
 Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 
 */
 
+function isThisAnEmail(str3) {
+    let re = /\S+@\S+\.\S+/
+    return re.test(str3)
+}
+
+console.log(isThisAnEmail("anything@gmail.com"))
+
 /* EXERCISE 7
 
 Write a function called whatDayIsIt that should return the current day of the week.
 
 */
+
+function whatDayIsIt() {
+    let day
+    switch (new Date().getDay()) {
+        case 0: day = "Sunday"
+            console.log(day)
+            break
+        case 1: day = "Monday"
+            console.log(day)
+            break
+        case 2: day = "Tuesday"
+            console.log(day)
+            break
+        case 3: day = "Wednesday"
+            console.log(day)
+            break
+        case 4: day = "Thursday"
+            console.log(day)
+            break
+        case 5: day = "Friday"
+            console.log(day)
+            break
+        case 6: day = "Saturday"
+            console.log(day)
+            break
+
+    }
+}
+
+whatDayIsIt()
 
 /* EXERCISE 8
 
