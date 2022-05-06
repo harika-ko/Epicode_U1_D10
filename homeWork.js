@@ -92,11 +92,27 @@ Write a function called dice; it should randomize an integer number between 1 an
 
 */
 
+function dice(min, max) {
+    console.log(Math.floor(Math.random() * (max - min + 1) + min))
+}
+
+dice(1, 6)
+
 /* EXERCISE 2
 
 Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 
 */
+
+function whoIsBigger(n1, n2) {
+    if (n1 > n2) {
+        console.log("The bigger number is", n1)
+    } else {
+        console.log("The bigger number is", n2)
+    }
+}
+
+whoIsBigger(56, 45)
 
 /* EXERCISE 3
 
@@ -105,6 +121,12 @@ Write a function called splitMe which receives a string as a parameter and retur
 Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 
 */
+
+function splitMe(str) {
+    console.log(str.split(" "))
+}
+
+splitMe("I love coding")
 
 /* EXERCISE 4
 
